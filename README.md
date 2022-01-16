@@ -1,2 +1,2 @@
 # design_patterns
-CSCE 247
+CSCE 247 - Ryan LeBoeuf
