@@ -1,4 +1,4 @@
-package design_patterns.observer;
+package observer;
 
 /**
  * A driver for our student government polling system.
