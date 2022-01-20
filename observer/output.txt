@@ -1,0 +1,9 @@
+Welcome to Fun Collegiate's Student Gov Poll
+
+Current Tallies:
+Jim roberts: 27
+Cindy smith: 24
+
+Current Percent of Votes:
+Jim roberts: 52.9%
+Cindy smith: 47.1%
