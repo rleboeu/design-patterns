@@ -2,13 +2,22 @@ package password;
 
 import java.util.Scanner;
 
+/**
+ * Driver class for the Password Decorator program
+ */
 public class PasswordProgram {
     private Scanner reader;
 
+    /**
+     * Constructor
+     */
     public PasswordProgram() {
         reader = new Scanner(System.in);
     }
 
+    /**
+     * Runs our Password Decorator program
+     */
     public void run() {
         System.out.println("Welcome to our password generator program");
         System.out.println("Enter a phrase: ");
@@ -30,6 +39,7 @@ public class PasswordProgram {
         password = bestPassword.getPassword();
         System.out.println("An even even stronger password for you may be: " + password);
     }
+    
     public static void main(String[] args){
         PasswordProgram program = new PasswordProgram();
         program.run();
