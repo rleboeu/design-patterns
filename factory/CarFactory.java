@@ -18,15 +18,17 @@ public class CarFactory {
         Car car;
 
         // create a car dependent on what the specified type is
-        if (type.equals("small")) {
+        if (type.equals(CarType.SMALL.toString().toLowerCase())) {
             car = new SmallCar(make, model);
-        } else if (type.equals("sedan")) {
+        } else if (type.equals(CarType.SEDAN.toString().toLowerCase())) {
             car = new SedanCar(make, model);
-        } else if (type.equals("luxury")) {
+        } else if (type.equals(CarType.LUXURY.toString().toLowerCase())) {
             car = new LuxuryCar(make, model);
         } else {
             car = new SmallCar(make, model);
         }
+
+        car.assemble();
 
         return car;
     }
