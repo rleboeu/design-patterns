@@ -15,7 +15,7 @@ public class CarFactory {
      * @return Car that was created
      */
     public static Car createCar(String type, String make, String model) {
-        Car car = null;
+        Car car;
 
         // create a car dependent on what the specified type is
         if (type.equals("small")) {
@@ -24,13 +24,8 @@ public class CarFactory {
             car = new SedanCar(make, model);
         } else if (type.equals("luxury")) {
             car = new LuxuryCar(make, model);
-        }
-
-        if (car != null) {
-            System.out.println("Creating a " + make + " " + model);
-            car.assemble();
         } else {
-            System.out.println("Type not recognized...");
+            car = new SmallCar(make, model);
         }
 
         return car;
