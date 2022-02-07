@@ -29,9 +29,13 @@ public class ExerciseIterator implements Iterator {
     public Object next() {
         Object nextObject = null;
 
+        // if the iterator has a next node, increment position and return it.
+        // otherwise, set the position to 0 and return null.
         if (this.hasNext()) {
             this.position++;
             nextObject = this.exercises[position];
+        } else {
+            this.position = 0;
         }
 
         return nextObject;
