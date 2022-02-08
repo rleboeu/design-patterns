@@ -15,7 +15,7 @@ public interface Iterator {
 
     /**
      * Returns a reference of the next object in the Iterator
-     * @return reference of the next objet in the Iterator
+     * @return reference of the next object in the Iterator
      */
     public Object next();
 
