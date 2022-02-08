@@ -54,7 +54,26 @@ public class Exercise {
     public String toString() {
         StringBuffer sb = new StringBuffer();
 
-        // to-be-implemented
+        sb.append("\n... " + this.title + " ...\n");
+
+        // append the muscles as a comma-separated list
+        sb.append("Muscles: ");
+        for (int i = 0; i < this.targetMuscles.size(); ++i) {
+            sb.append(this.targetMuscles.get(i));
+
+            // only print a comma if there is another muscle to be printed 
+            if (i < this.targetMuscles.size()-1) {
+                sb.append(", ");
+            }
+        }
+
+        sb.append("\n");    // formatting
+
+        // append directions as a bulleted list
+        sb.append("Directions:\n");
+        for (String direction : this.directions) {
+            sb.append("- " + direction + "\n");
+        }
 
         return sb.toString();
     }
