@@ -26,8 +26,8 @@ public class ExerciseIterator implements Iterator {
     }
 
     @Override
-    public Object next() {
-        Object nextObject = null;
+    public Exercise next() {
+        Exercise nextObject = null;
 
         // if the iterator has a next node, increment position and return it.
         // otherwise, set the position to 0 and return null.
