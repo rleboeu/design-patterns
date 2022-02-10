@@ -14,6 +14,7 @@ public class PT {
     private String lastName;
     private String bio;
     private Exercise[] exercises;
+    private int numExercises;
 
     /**
      * Constructor
@@ -27,6 +28,7 @@ public class PT {
         this.bio = bio;
 
         this.exercises = new Exercise[1];
+        this.numExercises = 0;
     }
 
     /**
@@ -38,9 +40,13 @@ public class PT {
     public void addExercise(String title, ArrayList<String> muscleGroups, ArrayList<String> directions) {
         Exercise newExercise = new Exercise(title, muscleGroups, directions);
 
-        // add the newExercise to the exercises array.
-        // only grow the array if there is not adequate space.
-        if (this.exercises.length == 0) {
+        /*  If there are no exercises present, increment the number of exercises
+            and put the newExercise into the 0th position.
+            
+            Otherwise, grow the array by 1 space and put the newExercise into
+            the last position of the exercises array. */
+        if (this.numExercises == 0 && this.exercises.length == 1) {
+            numExercises++;
             this.exercises[0] = newExercise;
         } else {
             this.exercises = this.growArray(this.exercises);

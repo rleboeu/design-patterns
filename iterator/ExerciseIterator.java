@@ -9,7 +9,7 @@ public class ExerciseIterator implements Iterator {
     
     // fields
     private Exercise[] exercises;
-    private int position;
+    private int position;   // starts at -1, will be incremented before array accessed
 
     /**
      * Constructor
@@ -17,7 +17,7 @@ public class ExerciseIterator implements Iterator {
      */
     public ExerciseIterator(Exercise[] exercises) {
         this.exercises = exercises;
-        this.position = 0;
+        this.position = -1;
     }
 
     @Override
