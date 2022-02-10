@@ -2,9 +2,15 @@ package iterator;
 
 import java.util.ArrayList;
 
+/**
+ * Gym program - Iterator Design Pattern
+ */
 public class Gym {
     public Gym(){}
 
+    /**
+     * Run the Gym program
+     */
     public void run(){
         PT ashley = new PT("Ashley", "James", "Ashley is in her 3rd year of PT, and specializes in body weight exercises");
 
@@ -58,6 +64,10 @@ public class Gym {
 
     }
 
+    /**
+     * Display the exercises contained in the ExerciseIterator
+     * @param eIterator ExerciseIterator that contains exercises to be displayed
+     */
     private void displayExercises(ExerciseIterator eIterator){
         System.out.println("Exercises: ");
         while(eIterator.hasNext()) {
