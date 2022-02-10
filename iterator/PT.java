@@ -73,7 +73,7 @@ public class PT {
 
     /**
      * Returns an ExerciseIterator
-     * @return
+     * @return ExerciseIterator that contains an iterable collection of Exercises
      */
     public ExerciseIterator createIterator() {
         ExerciseIterator iterator = new ExerciseIterator(this.exercises);
