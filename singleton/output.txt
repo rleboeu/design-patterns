@@ -1,0 +1,26 @@
+Let's have fun with Math!
+(P)lay or (Q)uit: p
+
+Round answer to 1 decimal place
+82 * 34 = 2788
+You got it!
+(P)lay or (Q)uit: p
+
+Round answer to 1 decimal place
+73 - 68 = 5
+You got it!
+(P)lay or (Q)uit: p
+
+Round answer to 1 decimal place
+50 * 67 = 3000
+The correct answer is: 3350.0
+(P)lay or (Q)uit: p
+
+Round answer to 1 decimal place
+72 / 63 = 1.1
+You got it!
+(P)lay or (Q)uit: g
+Sorry, you must enter p or q
+(P)lay or (Q)uit: q
+You won 3 games!
+Goodbye
