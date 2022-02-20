@@ -27,6 +27,7 @@ public class MathGame {
         this.rand = new Random();
         this.reader = new Scanner(System.in);
         System.out.println("Let's have fun with Math!");
+        this.score = 0;
     }
     
     /**
@@ -69,7 +70,9 @@ public class MathGame {
             }
 
             if (userInput.equals("p")) {
-                this.playRound();
+                if (this.playRound()) {
+                    score++;
+                }
             } else if (userInput.equals("q")) {
                 running = false;
             }
@@ -78,6 +81,7 @@ public class MathGame {
         System.out.println("You won " + this.score + " games!");
         System.out.println("Goodbye...");
 
+        this.reader.close();
     }
 
     /**
@@ -85,8 +89,70 @@ public class MathGame {
      * @return boolean
      */
     private boolean playRound() {
-        System.out.println("Round played");
-        return false;
+        double firstNum, secondNum;
+        double result = 0d;
+        int operatorIndex;
+        String operator;
+        String userInput;
+        double userInputDouble = 0d;
+
+        // pick a random operator from the operands array
+        operatorIndex = rand.nextInt(this.operands.length);
+        operator = this.operands[operatorIndex];
+
+        // generate two numbers, each between [0, 100)
+        firstNum = this.rand.nextInt(100);
+        secondNum = this.rand.nextInt(100);
+
+        System.out.println("Round answer to 1 decimal place");
+
+        // calculate the correct answer
+        if (operator.equals("+")) {
+            result = firstNum + secondNum;
+        } else if (operator.equals("-")) {
+            result = firstNum - secondNum;
+        } else if (operator.equals("*")) {
+            result = firstNum * secondNum;
+        } else if (operator.equals("/")) {
+            result = firstNum / secondNum;
+        }
+
+        // round the result to the tenths place
+        result *= 10;
+        result = Math.round(result);
+        result /= 10;
+
+        // loop until the user enters a decimal or integer
+        boolean validInput = false;
+        while (!validInput) {
+
+            // prompt the user with the equation
+            System.out.println(firstNum + " " + operator + " " + secondNum + " = ");
+            userInput = reader.next();
+    
+            // check to see that the user gave correct input
+            try {
+                userInputDouble = Double.parseDouble(userInput);
+                validInput = true;
+            } catch (NumberFormatException nfe) {
+                System.out.println("Whoops! That's not a number!");
+                continue;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                continue;
+            }
+        }
+
+        boolean isUserCorrect = result == userInputDouble;
+
+        // inform the user of the correct answer
+        if (isUserCorrect) {
+            System.out.println("You got it!\n");
+        } else {
+            System.out.println("The correct answer is: " + result + "\n");
+        }
+
+        return isUserCorrect;
     }
 
 }
