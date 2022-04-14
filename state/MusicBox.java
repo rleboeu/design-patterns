@@ -19,10 +19,12 @@ public class MusicBox {
      * Constructor
      */
     public MusicBox() {
+        System.out.println("Creating Our Music Box");
         this.englishState = new EnglishState(this);
         this.spanishState = new SpanishState(this);
         this.frenchState = new FrenchState(this);
         this.state = this.englishState;
+        System.out.println("Starting up the music box");
     }
 
     /**
