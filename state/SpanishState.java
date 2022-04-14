@@ -11,6 +11,7 @@ public class SpanishState implements State {
 
     private ArrayList<String> twinkle;
     private ArrayList<String> happy;
+    private MusicBox box;
 
     /**
      * Constructor
