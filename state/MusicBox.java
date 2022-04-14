@@ -22,6 +22,7 @@ public class MusicBox {
         this.englishState = new EnglishState(this);
         this.spanishState = new SpanishState(this);
         this.frenchState = new FrenchState(this);
+        this.state = this.englishState;
     }
 
     /**
